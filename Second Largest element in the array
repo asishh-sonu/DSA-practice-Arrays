@@ -1,0 +1,20 @@
+class Solution {
+    public int print2largest(List<Integer> arr) {
+        int largest = arr.get(0);
+        int slargest = -1;
+        
+        for(int i = 1;i<arr.size();i++){
+            if(arr.get(i)>largest){
+                largest = arr.get(i);
+            }
+            
+        }
+        
+        for(int i = 0;i<arr.size();i++){
+            if(arr.get(i) > slargest && arr.get(i) != largest){
+                slargest = arr.get(i);
+            }
+        }
+        return slargest;
+    }
+}  
